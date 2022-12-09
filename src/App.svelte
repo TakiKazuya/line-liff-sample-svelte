@@ -3,6 +3,8 @@
   import Reservation from "./routes/reservation/New.svelte"
   import { Alert } from 'sveltestrap';
 
+  console.log(import.meta)
+  console.log(import.meta.env)
   console.log('VITE_LIFF_ID:', import.meta.env.VITE_LIFF_ID)
   async function init() {
     await liff.init({
