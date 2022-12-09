@@ -6,7 +6,7 @@
   console.log('VITE_LIFF_ID:', import.meta.env.VITE_LIFF_ID)
   async function init() {
     await liff.init({
-      liffId: import.meta.env.VITE_LIFF_ID
+      liffId: '1657708125-0aOKbALj'
     });
     if (!liff.isLoggedIn()) {
       liff.login();
