@@ -13,10 +13,11 @@
     displayName = profile.displayName;
   }
 
-  export let url = import.meta.env.BASE_URL;
+  export const basepath = "/line-liff-sample-svelte"
+  export const url = "";
 </script>
 
-<Router url="{url}">
+<Router basepath="{basepath}" url="{url}">
   <main>
     <div class="mx-auto md:w-2/3 w-full mt-2">
       <Route path="/">
