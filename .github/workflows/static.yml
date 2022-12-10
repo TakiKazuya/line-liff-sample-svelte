@@ -37,6 +37,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
+          GITHUB_PAGES: true
           VITE_LIFF_ID: 1657708125-0aOKbALj
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
