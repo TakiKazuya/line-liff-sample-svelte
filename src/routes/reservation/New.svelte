@@ -1,7 +1,7 @@
 <script>
   import liff from "@line/liff";
   import { Router, Link, Route } from "svelte-routing";
-  import {Label, Input, Button} from 'sveltestrap'
+  import {Label, Input, Button, Container, Row, Col} from 'sveltestrap'
 
   let displayName = "";
   let accessToken = liff.getAccessToken();
@@ -12,15 +12,19 @@
     displayName = profile.displayName;
   }
 
-  export const basepath = "/line-liff-sample-svelte"
+  export const basepath = import.meta.env.BASE_PATH
   export const url = "";
 </script>
 
 <Router basepath="{basepath}" url="{url}">
   <main>
-    <div class="mx-auto md:w-2/3 w-full mt-2">
+    <Container>
       <Route path="/">
-        <h1>予約フォーム</h1>
+        <Row>
+          <Col>
+            <h1>予約フォーム</h1>
+          </Col>
+        </Row>
         {#await fetchProfile()}
         {:then profile}
           <div class='mb-2 mx-2'>
@@ -43,6 +47,6 @@
         <p>名前：{displayName}</p>
         <p>日時：{reserved_at}</p>
       </Route>
-    </div>
+    </Container>
   </main>
 </Router>
