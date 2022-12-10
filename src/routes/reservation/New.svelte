@@ -13,7 +13,7 @@
     displayName = profile.displayName;
   }
 
-  export let url = "";
+  export let url = import.meta.env.BASE_URL;
 </script>
 
 <Router url="{url}">
