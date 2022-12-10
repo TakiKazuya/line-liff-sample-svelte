@@ -46,6 +46,9 @@
         <h1>予約完了</h1>
         <p>名前：{displayName}</p>
         <p>日時：{reserved_at}</p>
+        {#if liff.isInClient()}
+          <Button block on:click={liff.closeWindow()}>閉じる</Button>
+        {/if}
       </Route>
     </Container>
   </main>
