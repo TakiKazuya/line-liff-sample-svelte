@@ -9,7 +9,6 @@
 
   async function fetchProfile() {
     const profile = await liff.getProfile()
-    console.log('profile', profile)
     displayName = profile.displayName;
   }
 
