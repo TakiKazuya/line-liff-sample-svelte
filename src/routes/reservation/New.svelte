@@ -12,6 +12,7 @@
     displayName = profile.displayName;
   }
 
+  console.log(import.meta.env.BASE_PATH)
   export const basepath = import.meta.env.BASE_PATH
   export const url = "";
 </script>
